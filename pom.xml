@@ -18,7 +18,7 @@
     <dependencies>
         <dependency>
             <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-java</artifactId>
+            <artifactId>cucumber-java8</artifactId>
             <version>7.10.1</version>
             <scope>test</scope>
         </dependency>
@@ -27,11 +27,17 @@
             <artifactId>cucumber-testng</artifactId>
             <version>7.10.1</version>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>info.cukes</groupId>-->
+<!--            <artifactId>gherkin</artifactId>-->
+<!--            <version>2.12.2</version>-->
+<!--            <scope>provided</scope>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>info.cukes</groupId>
-            <artifactId>gherkin</artifactId>
-            <version>2.12.2</version>
-            <scope>provided</scope>
+            <artifactId>cucumber-java8</artifactId>
+            <version>1.2.5</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>

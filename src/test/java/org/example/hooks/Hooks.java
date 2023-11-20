@@ -1,7 +1,7 @@
 package org.example.hooks;
 
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import lombok.extern.java.Log;
 import org.example.driver.Driver;
 import org.example.driver.DriverFactory;
