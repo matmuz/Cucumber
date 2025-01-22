@@ -1,10 +1,12 @@
 package org.example.hooks;
 
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import lombok.extern.java.Log;
 import org.example.driver.Driver;
 import org.example.driver.DriverFactory;
+
+import java.time.Duration;
 
 import static org.example.configuration.ConfigurationRetriever.getConfiguration;
 
@@ -15,6 +17,7 @@ public class Hooks {
     public void setUp() {
         new Driver(getConfiguration().browser());
         DriverFactory.getDriver().navigate().to(getConfiguration().appUrl());
+        DriverFactory.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
 
     @After

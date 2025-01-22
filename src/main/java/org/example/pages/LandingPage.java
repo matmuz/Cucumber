@@ -7,7 +7,6 @@ import java.util.List;
 
 public class LandingPage extends BasePage {
 
-
     @FindBy(css = ".thumbnail-container")
     private List<WebElement> products;
 

@@ -9,13 +9,19 @@ public class DriverOptionsFactory {
 
     public static ChromeOptions getChromeOptions() {
         ChromeOptions options = new ChromeOptions();
-        options.setHeadless(getConfiguration().headless()).addArguments("--start-maximized", "--incognito");
+        options.addArguments("--start-maximized", "--incognito");
+        if (getConfiguration().headless()) {
+            options.addArguments("--headless=new");
+        }
         return options;
     }
 
     public static EdgeOptions getEdgeOptions() {
         EdgeOptions options = new EdgeOptions();
-        options.setHeadless(getConfiguration().headless()).addArguments("--start-maximized", "--inprivate");
+        options.addArguments("--start-maximized", "--incognito");
+        if (getConfiguration().headless()) {
+            options.addArguments("--headless");
+        }
         return options;
     }
 
