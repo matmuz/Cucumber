@@ -9,7 +9,7 @@ public class DriverOptionsFactory {
 
     public static ChromeOptions getChromeOptions() {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--start-maximized", "--incognito");
+        options.addArguments("--start-maximized");
         if (getConfiguration().headless()) {
             options.addArguments("--headless=new");
         }
@@ -18,7 +18,7 @@ public class DriverOptionsFactory {
 
     public static EdgeOptions getEdgeOptions() {
         EdgeOptions options = new EdgeOptions();
-        options.addArguments("--start-maximized", "--incognito");
+        options.addArguments("--start-maximized");
         if (getConfiguration().headless()) {
             options.addArguments("--headless");
         }
